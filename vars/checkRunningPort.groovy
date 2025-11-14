@@ -1,6 +1,6 @@
 def call(Map cfg) {
-    def bluePort = ${cfg.bluePort}
-    def greenPort = ${cfg.greenPort}
+    def bluePort = cfg.bluePort
+    def greenPort = cfg.greenPort
 
     def checkRun = sh(script: "docker ps --filter name=${cfg.imageName}-blue -q", returnStdout: true).trim()
 
